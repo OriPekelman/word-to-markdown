@@ -73,7 +73,7 @@ class WordToMarkdown
       string.sub!(/\A[[:space:]]+/,'')                # leading whitespace
       string.sub!(/[[:space:]]+\z/,'')                # trailing whitespace
       string.gsub!(/\n\n \n\n/,"\n\n")                # Quadruple line breaks
-      string.gsub!(/\u00A0/, "")                      # Unicode non-breaking spaces, injected as tabs
+      string.gsub!(/\u00A0/, "&nbsp;")                      # Unicode non-breaking spaces, injected as tabs
       string
     end
 
